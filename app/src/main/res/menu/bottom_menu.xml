@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/hotFragment"
+        android:icon="@drawable/ic_flame_svgrepo_com"
+        android:title="Hot"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/swipeFragment"
+        android:icon="@drawable/mayalu_app_icon"
+        android:title="Swipe"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/chatListFragment"
+        android:icon="@drawable/ic_baseline_chat_24"
+        android:title="Chat"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/profileFragment"
+        android:icon="@drawable/ic_baseline_person_24"
+        android:title="Profile"
+        app:showAsAction="ifRoom" />
+</menu>

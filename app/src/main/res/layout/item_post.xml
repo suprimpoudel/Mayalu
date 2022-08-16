@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="15dp">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/imvProfilePicture"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toTopOf="@id/txvPostContent"
+                app:layout_constraintEnd_toStartOf="@id/txvUsername"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent"
+                app:srcCompat="@mipmap/ic_launcher" />
+
+            <ImageView
+                android:id="@+id/imvPostEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/ic_baseline_mode_edit_outline_24"
+                app:layout_constraintBottom_toBottomOf="@id/imvProfilePicture"
+                app:layout_constraintEnd_toStartOf="@id/imvPostDelete"
+                app:layout_constraintStart_toEndOf="@id/txvUsername"
+                app:layout_constraintTop_toTopOf="@id/imvProfilePicture" />
+
+            <ImageView
+                android:id="@+id/imvPostDelete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_delete_forever_24"
+                app:layout_constraintBottom_toBottomOf="@id/imvProfilePicture"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/imvProfilePicture" />
+
+            <TextView
+                android:id="@+id/txvUsername"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toTopOf="@id/txvPostDate"
+                app:layout_constraintEnd_toStartOf="@id/imvPostEdit"
+                app:layout_constraintStart_toEndOf="@id/imvProfilePicture"
+                app:layout_constraintTop_toTopOf="@id/imvProfilePicture"
+                app:layout_constraintVertical_chainStyle="spread_inside"
+                tools:text="Full Name" />
+
+            <TextView
+                android:id="@+id/txvPostDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                app:layout_constraintBottom_toBottomOf="@id/imvProfilePicture"
+                app:layout_constraintEnd_toStartOf="@id/imvPostEdit"
+                app:layout_constraintStart_toEndOf="@id/imvProfilePicture"
+                app:layout_constraintTop_toBottomOf="@id/txvUsername"
+                tools:text="12th July 2022" />
+
+            <TextView
+                android:id="@+id/txvPostContent"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txvPostDate"
+                tools:text="This is the content of the post to demonstrate how the post will look like in real device" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</layout>

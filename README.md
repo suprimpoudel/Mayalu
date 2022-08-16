@@ -1,0 +1,1 @@
+# This is an android application made via Kotlin and Firebase. This app is just simple demo for dating app which allows user to like/ dislike users, chat with matched users, post/view status and much more

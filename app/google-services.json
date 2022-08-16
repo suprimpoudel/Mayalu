@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "765444944253",
+    "project_id": "mayalu-4c138",
+    "storage_bucket": "mayalu-4c138.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:765444944253:android:834c5b0bf88e470b175c14",
+        "android_client_info": {
+          "package_name": "com.np.suprimpoudel.mayalu"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "765444944253-iujm8cu8drdm946felradivv6gas2p4o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCLLYlfGR3oLwR9HXrVN56AYAZSvnyYXHo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "765444944253-iujm8cu8drdm946felradivv6gas2p4o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

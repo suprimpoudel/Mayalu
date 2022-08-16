@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/helper_navigation"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.np.suprimpoudel.mayalu.features.ui.fragments.auth.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right" />
+        <action
+            android:id="@+id/action_loginFragment_to_resetPasswordFragment"
+            app:destination="@id/resetPasswordFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right" />
+        <action
+            android:id="@+id/action_loginFragment_to_OTPEnterFragment"
+            app:destination="@id/OTPEnterFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_signUpFormFragment"
+            app:destination="@id/signUpFormFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.np.suprimpoudel.mayalu.features.ui.fragments.auth.SignUpFragment"
+        android:label="fragment_sign_up"
+        tools:layout="@layout/fragment_sign_up" />
+    <fragment
+        android:id="@+id/resetPasswordFragment"
+        android:name="com.np.suprimpoudel.mayalu.features.ui.fragments.auth.ResetPasswordFragment"
+        android:label="fragment_reset_password"
+        tools:layout="@layout/fragment_reset_password" />
+    <fragment
+        android:id="@+id/OTPEnterFragment"
+        android:name="com.np.suprimpoudel.mayalu.features.ui.fragments.auth.OTPEnterFragment"
+        android:label="fragment_o_t_p_enter"
+        tools:layout="@layout/fragment_o_t_p_enter">
+        <argument
+            android:name="otpCode"
+            app:argType="integer" />
+        <argument
+            android:name="email"
+            app:argType="string" />
+        <argument
+            android:name="userId"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpFormFragment"
+        android:name="com.np.suprimpoudel.mayalu.features.ui.fragments.auth.SignUpFormFragment"
+        android:label="fragment_sign_up_form"
+        tools:layout="@layout/fragment_sign_up_gender_preference">
+        <action
+            android:id="@+id/action_signUpFormFragment_to_signUpPersonalDetailFragment"
+            app:destination="@id/signUpPersonalDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpPersonalDetailFragment"
+        android:name="com.np.suprimpoudel.mayalu.features.ui.fragments.auth.SignUpPersonalDetailFragment"
+        android:label="fragment_sign_up_personal_detail"
+        tools:layout="@layout/fragment_sign_up_personal_detail">
+        <action
+            android:id="@+id/action_signUpPersonalDetailFragment_to_signUpUploadPhotoFragment"
+            app:destination="@id/signUpUploadPhotoFragment" />
+        <argument
+            android:name="gender"
+            app:argType="string" />
+        <argument
+            android:name="lookingFor"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpUploadPhotoFragment"
+        android:name="com.np.suprimpoudel.mayalu.features.ui.fragments.auth.SignUpUploadPhotoFragment"
+        android:label="fragment_sign_up_upload_photo"
+        tools:layout="@layout/fragment_sign_up_upload_photo">
+        <argument
+            android:name="gender"
+            app:argType="string" />
+        <argument
+            android:name="lookingFor"
+            app:argType="string" />
+        <argument
+            android:name="name"
+            app:argType="string" />
+        <argument
+            android:name="age"
+            app:argType="integer" />
+    </fragment>
+</navigation>

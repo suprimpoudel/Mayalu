@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:id="@+id/fragmentSignUpForm"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="30dp"
+        tools:context="com.np.suprimpoudel.mayalu.features.ui.fragments.auth.SignUpFormFragment">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hi! I am..."
+            android:textColor="?colorOnPrimary"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:id="@+id/radioGender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="50dp"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/radioBtnMale"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/radio_selector"
+                android:button="@null"
+                android:drawableStart="@drawable/ic_baseline_male_24"
+                android:padding="10dp"
+                android:text="Male"
+                android:textAlignment="center"
+                android:textColor="@drawable/radio_text_color" />
+
+            <RadioButton
+                android:id="@+id/radioBtnFemale"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/radio_selector"
+                android:button="@null"
+                android:drawableStart="@drawable/ic_baseline_female_24"
+                android:padding="10dp"
+                android:text="Female"
+                android:textAlignment="center"
+                android:textColor="@drawable/radio_text_color" />
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="Looking for"
+            android:textColor="?colorOnPrimary"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:id="@+id/radioInterested"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="50dp"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/radioBtnMaleInterested"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/radio_selector"
+                android:button="@null"
+                android:drawableStart="@drawable/ic_baseline_male_24"
+                android:padding="10dp"
+                android:text="Male"
+                android:textAlignment="center"
+                android:textColor="@drawable/radio_text_color" />
+
+            <RadioButton
+                android:id="@+id/radioBtnFemaleInterested"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/radio_selector"
+                android:button="@null"
+                android:drawableStart="@drawable/ic_baseline_female_24"
+                android:padding="10dp"
+                android:text="Female"
+                android:textAlignment="center"
+                android:textColor="@drawable/radio_text_color" />
+
+            <RadioButton
+                android:id="@+id/radioBtnBothInterested"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/radio_selector"
+                android:button="@null"
+                android:padding="10dp"
+                android:drawableStart="@drawable/ic_baseline_person_24"
+                android:drawableTint="@color/primaryColor"
+                android:text="Both"
+                android:textAlignment="center"
+                android:textColor="@drawable/radio_text_color" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/btnContinue"
+            style="@style/CustomButton"
+            android:layout_marginTop="14dp"
+            android:text="@string/continue_btn" />
+
+    </LinearLayout>
+</layout>

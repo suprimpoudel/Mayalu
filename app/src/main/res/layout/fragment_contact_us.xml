@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp"
+        tools:context="com.np.suprimpoudel.mayalu.features.ui.fragments.user.ContactUsFragment">
+
+        <TextView
+            android:id="@+id/txvMayaluContact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Contact Mayalu Team"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txvEmailIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="＠"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txvMayaluContact" />
+
+        <TextView
+            android:id="@+id/txvEmailTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="Email:"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="@id/txvEmailIcon"
+            app:layout_constraintStart_toEndOf="@id/txvEmailIcon"
+            app:layout_constraintTop_toTopOf="@id/txvEmailIcon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" mayaluteam@gmail.com"
+            android:textColor="@color/primaryColor"
+            app:layout_constraintBottom_toBottomOf="@id/txvEmailTitle"
+            app:layout_constraintStart_toEndOf="@id/txvEmailTitle"
+            app:layout_constraintTop_toTopOf="@id/txvEmailTitle" />
+
+        <ImageView
+            android:id="@+id/imvLocationIcon"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/ic_baseline_location_on_24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txvEmailIcon" />
+
+        <TextView
+            android:id="@+id/txvLocationTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="Location:"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="@id/imvLocationIcon"
+            app:layout_constraintStart_toEndOf="@id/imvLocationIcon"
+            app:layout_constraintTop_toTopOf="@id/imvLocationIcon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" Kathmandu, Nepal"
+            android:textColor="@color/primaryColor"
+            app:layout_constraintBottom_toBottomOf="@id/txvLocationTitle"
+            app:layout_constraintStart_toEndOf="@id/txvLocationTitle"
+            app:layout_constraintTop_toTopOf="@id/txvLocationTitle" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

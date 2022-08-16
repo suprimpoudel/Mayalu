@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_navigation"
+    app:startDestination="@id/swipeFragment">
+
+    <fragment
+        android:id="@+id/swipeFragment"
+        android:name="com.np.suprimpoudel.mayalu.features.ui.fragments.user.SwipeFragment"
+        android:label="fragment_swipe"
+        tools:layout="@layout/fragment_swipe">
+        <action
+            android:id="@+id/action_swipeFragment_to_userDetailFragment"
+            app:destination="@+id/userDetailFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/userDetailFragment"
+        android:name="com.np.suprimpoudel.mayalu.features.ui.fragments.user.UserDetailFragment"
+        android:label="fragment_user_details"
+        tools:layout="@layout/fragment_user_details">
+        <argument
+            android:name="username"
+            app:argType="string" />
+        <argument
+            android:name="profileImageUrl"
+            app:argType="string" />
+        <argument
+            android:name="gender"
+            app:argType="string" />
+        <argument
+            android:name="age"
+            app:argType="integer" />
+        <argument
+            android:name="about"
+            app:argType="string" />
+    </dialog>
+    <fragment
+        android:id="@+id/chatListFragment"
+        android:name="com.np.suprimpoudel.mayalu.features.ui.fragments.user.ChatListFragment"
+        android:label="My Chats"
+        tools:layout="@layout/fragment_chat_list">
+        <action
+            android:id="@+id/action_chatListFragment_to_chatFragment"
+            app:destination="@id/chatFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.np.suprimpoudel.mayalu.features.ui.fragments.user.ProfileFragment"
+        android:label="My Profile"
+        tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/action_profileFragment_to_contactUsFragment"
+            app:destination="@id/contactUsFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_editProfileFragment"
+            app:destination="@id/editProfileFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_matchesFragment"
+            app:destination="@id/matchesFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_changePasswordFragment"
+            app:destination="@id/changePasswordFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_myPostsFragment"
+            app:destination="@id/myPostsFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/contactUsFragment"
+        android:name="com.np.suprimpoudel.mayalu.features.ui.fragments.user.ContactUsFragment"
+        android:label="fragment_contact_us"
+        tools:layout="@layout/fragment_contact_us" />
+    <fragment
+        android:id="@+id/editProfileFragment"
+        android:name="com.np.suprimpoudel.mayalu.features.ui.fragments.user.EditProfileFragment"
+        android:label="Edit Profile"
+        tools:layout="@layout/fragment_edit_profile" />
+    <fragment
+        android:id="@+id/matchesFragment"
+        android:name="com.np.suprimpoudel.mayalu.features.ui.fragments.user.MatchesFragment"
+        android:label="My Matches"
+        tools:layout="@layout/fragment_matches">
+        <action
+            android:id="@+id/action_matchesFragment_to_userDetailFragment"
+            app:destination="@id/userDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/changePasswordFragment"
+        android:name="com.np.suprimpoudel.mayalu.features.ui.fragments.user.ChangePasswordFragment"
+        android:label="Change Password"
+        tools:layout="@layout/fragment_change_password" />
+    <fragment
+        android:id="@+id/chatFragment"
+        android:name="com.np.suprimpoudel.mayalu.features.ui.fragments.user.ChatFragment"
+        android:label="ChatFragment">
+        <argument
+            android:name="chatId"
+            app:argType="string" />
+        <argument
+            android:name="nickname"
+            app:argType="string" />
+        <argument
+            android:name="profileImageUrl"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_chatFragment_to_galleryBottomDialogFragment"
+            app:destination="@id/galleryBottomDialogFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/galleryBottomDialogFragment"
+        android:name="com.np.suprimpoudel.mayalu.features.ui.fragments.bottomsheet.GalleryBottomDialogFragment"
+        android:label="GalleryBottomDialogFragment" />
+    <fragment
+        android:id="@+id/hotFragment"
+        android:name="com.np.suprimpoudel.mayalu.features.ui.fragments.user.HotFragment"
+        android:label="Trending" />
+    <fragment
+        android:id="@+id/myPostsFragment"
+        android:name="com.np.suprimpoudel.mayalu.features.ui.fragments.user.MyPostsFragment"
+        android:label="My Posts">
+        <action
+            android:id="@+id/action_myPostsFragment_to_addEditPost"
+            app:destination="@id/addEditPost" />
+        <argument
+            android:name="userName"
+            app:argType="string" />
+        <argument
+            android:name="profilePicture"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/addEditPost"
+        android:name="com.np.suprimpoudel.mayalu.features.ui.fragments.user.AddEditPost"
+        android:label="Whats in your mind">
+        <argument
+            android:name="post"
+            app:argType="com.np.suprimpoudel.mayalu.features.shared.model.Post"
+            app:nullable="true" />
+        <argument
+            android:name="userName"
+            app:argType="string" />
+        <argument
+            android:name="profilePicture"
+            app:argType="string" />
+    </fragment>
+</navigation>
